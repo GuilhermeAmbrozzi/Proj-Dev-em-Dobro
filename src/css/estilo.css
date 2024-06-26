@@ -1,0 +1,150 @@
+body{
+    font-family: 'Outfit', sans-serif;
+    background-image: url(../image/fundo-base.jpg);
+    background-repeat: no-repeat;
+    /*para fazer a imagem cobrir toda a área, mais perde qualidade*/
+    background-size: cover;
+    /* altura da janela de navegação*/
+    min-height: 100vh;
+}
+.cabecalho{
+    text-align: center;
+    padding: 60px 0;
+}
+
+.cabecalho h1{
+    color: #f1ecff;
+    font-size: 45px;
+    /*serve para dar espaço entre as letras*/
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.personagens-slider{
+    /*é a forma de visualizar o elemento na tela*/
+    display: flex;
+    /*para alinhar os elementos ao centro*/
+    justify-content: center;
+    align-items: center;
+    /*espaço entre os filhos do elemento*/
+    gap: 80px; 
+}
+
+.lista-personagens{
+    width: 330px;
+    height: 520px;
+    /*para resolver o absolute tem que colocar essa position relative*/
+    position: relative;
+}
+
+.btn-seta{
+    background-color: #ffffff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: 0;
+    /*muda para a mãozinha ao passar nele*/
+    cursor: pointer;
+    /*se nao colocar esses aliamentos no celular buga*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*faz com que a mudança de cor do fundo do botão seja mais suave*/
+    transition: background-color 0.2s ease-in-out;
+    /*para colocar uma sombra ao fundo do botão*/
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/*quando um elemento tem 2 classe se escreve assim*/
+.btn-seta.btn-voltar{
+    /*faz o botao girar em 180 graus*/
+    transform: rotateY(180deg);
+}
+
+/*ao passar o mouse em sima das setas muda a cor do fundo por isso :houve*/
+.btn-seta:hover{
+    background-color: #8351fe;
+}
+/*faz com que os outros cartões sumam da tela com a opacidade 0*/
+.cartao{
+    opacity: 0;
+    height: 100%;
+    /*estudar o absolute para entender*/
+    position: absolute;
+    padding: 12px;
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+    /*comandos para alinhar os itens*/
+    display: flex;
+    flex-direction: column;
+    /* pega o espaço que esta sobrando e coloca entre os elementos */
+    justify-content: space-between;
+}
+/*faz com que o cartão com a classe selecionado apareça*/
+.cartao.selecionado{
+    opacity: 1;
+    /*força a ser o cartão correto*/
+    z-index: 1;
+}
+
+.cartao .imagem-personagem{
+    width: 100%;
+    max-height: 280px;
+}
+
+.cartao .nome{
+    background-color: rgba(179, 177, 185, 0.7);
+    padding: 8px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.cartao .descricao{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cartao .descricao .titulo{
+    background-color: #333333;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 12px;
+}
+
+.cartao .descricao .texto{
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+    max-height: 110px;
+    /*alinha o texto não deixando ele passar do limite*/
+    overflow-y: auto;
+}
+
+.cartao.fundo-1{
+    background: url(../image/fundo-1.jpg) no-repeat;
+}
+
+.cartao.fundo-2{
+    background: url(../image/fundo-2.jpg) no-repeat;
+}
+
+.cartao.fundo-3{
+    background: url(../image/fundo-3.jpg) no-repeat;
+}
+
+.cartao.fundo-4{
+    background: url(../image/fundo-4.jpg) no-repeat;
+}
+
+.cartao.fundo-5{
+    background: url(../image/fundo-5.jpg) no-repeat;
+}
+
+.cartao.fundo-6{
+    background: url(../image/fundo-6.jpg) no-repeat;
+}

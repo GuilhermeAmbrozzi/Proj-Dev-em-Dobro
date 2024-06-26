@@ -1,0 +1,32 @@
+/*seletor de tag
+p{
+
+}
+
+seletor de classe
+.cabecalho{
+background-color(propriedade): red(valor);
+
+}
+
+seletor universal
+
+*{
+
+}
+
+seletor de descendente, nesse caso estou mudando o li que esta dentro da tag ul.
+
+ul li{
+
+}
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
